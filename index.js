@@ -11,6 +11,8 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
 
+    if (message.author.id == "521450927471722516"){
+    
     if (message.content.startsWith (prefix + "avatar")) {
 
     const user = message.mentions.users.first();
@@ -22,7 +24,7 @@ bot.on('message', message => {
     .setImage(user.avatarURL)
     message.channel.send(avatar)
     console.log("Commande avatar éffectuée.")
-};
+}};
 
     if (message.author.id == "521450927471722516"){if(message.content === prefix + "cheh") {
     message.channel.send("https://media1.tenor.com/images/16eb23085c714f850a914af903a871d4/tenor.gif?itemid=12323680")
